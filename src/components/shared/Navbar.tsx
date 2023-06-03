@@ -129,7 +129,7 @@ export default function Navbar() {
             </div>
           ) : (
             <div>
-              <ul className="hidden space-x-3 md:flex">
+              <ul className="hidden space-x-3 sm:flex">
                 <li>
                   <Button variant="outline" className="px-6 py-3 ">
                     <Link href="/sign-in"> Sign In</Link>
@@ -146,24 +146,26 @@ export default function Navbar() {
                   </Button>
                 </li>
               </ul>
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="outline" className="p-2 h-fit">
-                    <MoreVerticalIcon size={18} />
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent>
-                  <DropdownMenuItem className="cursor-pointer">
-                    <Link href="/sign-in"> Sign In</Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem className="cursor-pointer">
-                    <Link href="/sign-up"> Sign Up</Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem className="cursor-pointer">
-                    <Link href="/admin/sign-in"> Admin Login</Link>
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
+              <div className="block sm:hidden">
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="outline" className="p-2 h-fit">
+                      <MoreVerticalIcon size={18} />
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent>
+                    <DropdownMenuItem className="cursor-pointer">
+                      <Link href="/sign-in"> Sign In</Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem className="cursor-pointer">
+                      <Link href="/sign-up"> Sign Up</Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem className="cursor-pointer">
+                      <Link href="/admin/sign-in"> Admin Login</Link>
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </div>
             </div>
           )}
         </nav>
