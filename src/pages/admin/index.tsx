@@ -282,8 +282,6 @@ export default function AdminHome() {
   const router = useRouter();
   const { isAuthenticated } = useAuthenticationStatus();
 
-  if (!isAuthenticated) router.push("/admin/sign-up");
-
   return (
     <>
       <Head>
